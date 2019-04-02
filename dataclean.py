@@ -38,7 +38,7 @@ def create_momentum(column_name, df, shift_size):
 
 def infl_momentum(column_name, df, shift_size):
     #this function creates a new column in your dataframe that is a momentum feature of another column
-    df[str(column_name)+'_'+str(shift_size)+'m_shift'] = ((df[str(column_name)] - df[str(column_name)].shift(shift_size))/df[str(column_name)].shift(shift_size))
+    df[str(column_name)+'_'+str(shift_size)+'m_shift'] = ((df[str(column_name)] - df[str(column_name)].shift(shift_size))/df[str(column_name)].shift(shift_size))*100
     
     
     
