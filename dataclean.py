@@ -39,6 +39,15 @@ def create_momentum(column_name, df, shift_size):
 def infl_momentum(column_name, df, shift_size):
     #this function creates a new column in your dataframe that is a momentum feature of another column
     df[str(column_name)+'_'+str(shift_size)+'m_shift'] = ((df[str(column_name)] - df[str(column_name)].shift(shift_size))/df[str(column_name)].shift(shift_size))*100
+
     
+#offseting data to factor in release timing
+def timing_offset(df):
+    offset_dict = {'PMI':1, 'UNR':1, 'YUNR':1,'US_NHOME_SALES':1, 'PART_TIME':1, 'CPPR_PRICE':1, 'HOUS_PERMS':1, 'HOUS_STARTS':1, 'CAP_UTIL':1, 'PERS_SAVINGS':3, 'EXPORTS':3, 'IMPORTS':3, 'TRADE_BALANCE':3, 'US_M2':1, 'US_NHOME_SALES':1,'PPI':1,'CPI':1} #positives shift down, negatives shift up. Goal of this dict is to align data to when it gets released
+    
+    for entry in offset_dict:
+        df[str(entry)] = df[str(entry)].shift(offset_dict[entry])
+        
+    return df
     
     
