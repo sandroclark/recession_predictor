@@ -105,4 +105,4 @@ print(performance)
 
 gen_results_gb.create_feat_imp(X,y,12,723,550,-1, params)
 
-print(gen_results_gb.create_probs(X,y,12,723,550,time)[0].tail(5))
+print(gen_results_gb.create_probs(X,y,12,723,550,time,params)[0].tail(5))
