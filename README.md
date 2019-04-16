@@ -6,8 +6,53 @@ Economic recessions and depressions cause substantial damage to people and busin
 
 To get the predicted probability of a recession occuring this month to a year out from now, follow the below instructions:
     1) Make sure all prerequisites are met.
-    2) 
+    2) Download the most recent version of the Fed yield curve data from here and save it as Fed10Y_3M.csv in the data folders: https://www.newyorkfed.org/research/capital_markets/ycfaq.html
+    3) Run individual models by going into their corresponding sub directories and running the 'FINAL' .py script (ex. python log_reg_final.py).
     
 
 # Prerequisites
+
+In order to run the models, you will need the below:
+
+1) A subscription to Trading Economics via Quandl and the Quandl API plugin installed on your computer.
+2) The basis_expansions and regression_tools module written by Matt Drury (@madrury) which can be installed with below:
+    pip install git+https://github.com/madrury/basis-expansions.git
+    pip install git+https://github.com/madrury/regression-tools.git
+This is necessary to run the splines within the logistic regression script.
+3) Standard Python DataScience packages.
+
+# Models
+
+Three models were built (Logistic Regression, Random Forest, and Gradient Boosted) yielding results in the attached presentation. I spent a significant amount of time also working on an LSTM Neural Network but was unnsuccessful so will add that as a potential next step.
+
+# Next Steps
+
+1) Implement an LSTM.
+2) Find additional data series to incorporate into the model including international data.
+3) Apply the model framework to predicting fluctuations in exchange rates between major global economies.
+
+# Data
+
+1) US Manufacturing ISM Purchasing Managers Index surveys purchasing managers around the country to see if they're buying more or less, then calculates an index indicating whether US manufacturing is expanding or contracting. 50 indicates flat, while below 50 is contracting and above 50 shows expansion.
+
+2) US Unemployment shows what percentage of Americans in the labor force filed for unemployment benfits.
+
+3) US Youth Unemployment gauges unemployment of youth 16 - 24 and is calculated similarly to the general unemployment rate; those looking for work/ total labor force.
+
+4) US Consumer Sentiment is calculated based on a survey conducted by the University of Michigan with confidence benchmarked to 1966 at 100. Survey attempts to gauge consumer financial habits related to saving and spending.
+
+5) US Part Time For Economic Reasons refers to the percentage of workers working 1 - 34 hours a week for economic reasons but looking for more work.
+
+6) Copper PPI is the Producer Price Index for copper specifically. I look at copper as a gauge for economic and industrial growth because it is used in pretty much everything.
+
+7) Housing Permits indicates how many permits were issued by the government for new housing construction.
+
+8) Housing Starts is how many buildings actually started construction.
+
+9) Capacity Utilization is calculated by the Fed as output/total industrial capacity. 
+
+10) Personal Savings Rate is calculated by the BEA as the amount of money left after people spend money and pay taxes. 
+
+11) US Exports.
+
 
