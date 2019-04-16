@@ -33,17 +33,17 @@ Three models were built (Logistic Regression, Random Forest, and Gradient Booste
 
 # Data
 
-1) US Manufacturing ISM Purchasing Managers Index surveys purchasing managers around the country to see if they're buying more or less, then calculates an index indicating whether US manufacturing is expanding or contracting. 50 indicates flat, while below 50 is contracting and above 50 shows expansion.
+1) US Manufacturing ISM Purchasing Managers Index surveys purchasing managers around the country to see if they're buying more or less, then calculates an index indicating whether US manufacturing is expanding or contracting. 50 indicates flat, while below 50 is contracting and above 50 shows expansion. Releases monthly for the previous month.
 
-2) US Unemployment shows what percentage of Americans in the labor force filed for unemployment benfits.
+2) US Unemployment shows what percentage of Americans in the labor force filed for unemployment benfits. Releases monthly for the previous month.
 
-3) US Youth Unemployment gauges unemployment of youth 16 - 24 and is calculated similarly to the general unemployment rate; those looking for work/ total labor force.
+3) US Youth Unemployment gauges unemployment of youth 16 - 24 and is calculated similarly to the general unemployment rate; those looking for work/ total labor force. Has a 1 month time lag releasing at the end of the month so almost a 2 month time lag.
 
-4) US Consumer Sentiment is calculated based on a survey conducted by the University of Michigan with confidence benchmarked to 1966 at 100. Survey attempts to gauge consumer financial habits related to saving and spending.
+4) US Consumer Sentiment is calculated based on a survey conducted by the University of Michigan with confidence benchmarked to 1966 at 100. Survey attempts to gauge consumer financial habits related to saving and spending. Released at the end of every monmth.
 
-5) US Part Time For Economic Reasons refers to the percentage of workers working 1 - 34 hours a week for economic reasons but looking for more work.
+5) US Part Time For Economic Reasons refers to the percentage of workers working 1 - 34 hours a week for economic reasons but looking for more work. Releases at the start of the next month on the same cadence as Unemployment.
 
-6) Copper PPI is the Producer Price Index for copper specifically. I look at copper as a gauge for economic and industrial growth because it is used in pretty much everything.
+6) Copper PPI is the Producer Price Index for copper specifically. I look at copper as a gauge for economic and industrial growth because it is used in pretty much everything. 
 
 7) Housing Permits indicates how many permits were issued by the government for new housing construction.
 
@@ -53,6 +53,28 @@ Three models were built (Logistic Regression, Random Forest, and Gradient Booste
 
 10) Personal Savings Rate is calculated by the BEA as the amount of money left after people spend money and pay taxes. 
 
-11) US Exports.
+11) Total value of US Exports.
+
+12) Total value of US Imports.
+
+13) US Trade Balance represents US Exports - US Imports.
+
+14) US Federal Funds Rate is the rate at which banks lend overnight money to each other set by the Federal Reserve in order to meet reserve requirements.
+
+15) M2 is a measure of the amount of curency in circulation encompassing cash, checks, savings and deposits.
+
+16) Total number of new sales dor a given month.
+
+17) PPI all commodities, a measure of the prices of a basket of goods used for the production of goods.
+
+18) CPI, a measure of the prices of a basket of consoumer goods.
+
+19) 3 Year Treasury Yield, interest rate that US 3 year bonds yield.
+
+20) 3 Month Treasury Yield, interest rate that US 3 month bonds yield.
+
+21) Spread (3YT - 3MT). When this goes negative it is called a partial inverted yield curve as the return on short term investments is higher than long term investments flagging pessimism in the long term prospects for the economy. A full inverted yield curve happens when all short term Treasuries have a higher yield than longer term.
+
+22) US Real GDP, total consumption, investment, government spending and exports minus imports adjusted for inflation.
 
 
